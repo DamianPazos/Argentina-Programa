@@ -12,23 +12,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Damian Pazos</title>
 </head>
-
-<body>
+<body id="body">
     <!-- Header -->
-    <header class="conteiner-fluid" id="header">
+    <header id="header">
+        <!-- Fondo Header -->
+        <div class="conteiner-fluid" id="header-image"></div>
         <!-- NavBar Responsive -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light" id="navbar">
             <div class="container-fluid">
                 <!-- Imagen del logo Argentina Programa -->
                 <a class="navbar-brand" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
                     <img class="img-fluid rounded-3 m-2" src="img\LogoArgentinaPrograma.svg" alt="Argentina Programa">
                 </a>
                 <!-- Bonton para desplegar el menu cuando la pantalla se achique -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navegacion" aria-controls="menu-navegacion" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Opciones para navergar en el NavBar -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="menu-navegacion">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <!-- Opcion Inicio -->
                         <li class="nav-item">
@@ -36,11 +37,11 @@
                         </li>
                         <!-- Opcion Sobre mi -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre mí</a>
+                            <a class="nav-link" href="#AboutMe">Sobre mí</a>
                         </li>
                         <!-- Opcion Inicio -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Experiencia</a>
+                            <a class="nav-link" href="#Experience">Experiencia</a>
                         </li>
                         <!-- Opcion Educacion -->
                         <li class="nav-item">
@@ -57,19 +58,80 @@
                     </ul>
                     <!-- Boton para ingresar el login -->
                     <form class="d-flex">
-                        <button class="btn btn-outline-success" type="submit">Login</button>
+                        <button class="btn btn-outline-primary" type="submit">Login</button>
                     </form>
                 </div>
             </div>
         </nav>
+        <div class="container-fluid" id="info_main">
+            <h1 class="" id="nombre"> Damian Ariel Pazos</h1>
+            <h2 class="" id="profesion"> Estudiante de Ingenieria en Informatica</h2>
+        </div>
     </header>
-
-    <div id="AboutMe">
-
+    <article>
+    <div class="card m-2" id="AboutMe">
+        <div class="card-title m-1">
+            <h1 class="text-center pt-5">Sobre mi</h1>
+        </div>
+        <div class="card-body">
+        <span><p class="m-5">Soy estudiante de Ingeniería en Informática de la Universidad Arturo Jaureche. Me encuentro capacitándome continuamente para poder desarrollarme profesionalmente y poder insertarme en el mundo IT. Los empleos en los que trabaje poco se relacionan con la carrera que estudio pero me brindaron distintas habilidades que se aprenden con la experiencia como: el manejo de grupos de trabajo, la exposición de resultados y toma de decisiones en momentos críticos.</p></span>
     </div>
-    <div id="Experience">
-
+</div>
+<div class="card m-2" id="Experience">
+    <div class="card-title m-1">
+        <h1 class="text-center pt-5">Experiencia</h1>
     </div>
+    <div class="card-body m-3">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <div class="card m-2">
+                            <div class="card-title p-1">
+                                <h3>Desarrollador Jr</h3>
+                                <h6>Andreani Grupo Logistico</h6>
+                                <span>
+                                    <p>Diciembre 2021 - Actualidad</p>
+                                </span>
+                                <span>
+                                    <ul>
+                                        <li>Resolucion de problemas de Software</li>
+                                        <li>Traduccion y matcheo de datos</li>
+                                        <li>Consumo de APIs</li>
+                                        <li>Customizacion de paginas web y CRM (Dynamics 365)</li>
+                                    </ul>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</div>
     <div id="Education">
 
     </div>
@@ -79,6 +141,7 @@
     <div id="Projects">
 
     </div>
+</article>
     <footer>
 
     </footer>
